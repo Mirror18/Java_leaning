@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="maven-antrun-" default="main"  >
+<target name="main">
+  <echo>Using env.test.properties</echo>
+  <copy file="src/main/resources/env.test.properties" tofile="C:\Users\mirror\desktop\fllow_working_knowledge\project\Java项目\leaning_Java\learn_maven\MVN\构建配置文件\target\classes/env.properties" overwrite="true"/>
+</target>
+</project>
