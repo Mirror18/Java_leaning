@@ -1,0 +1,194 @@
+<project xmlns = "http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation = "http://maven.apache.org/POM/4.0.0
+    http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <!-- 模型版本 -->
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- 项目标识，先从公司区分 -->
+    <groupId>xyz.mirror.project-group</groupId>
+    <!-- 项目的编号，名字 -->
+    <artifactId>project</artifactId>
+    <!-- 版本号 -->
+    <version>1.0</version>
+    
+    <build>
+        <plugins>
+
+           <plugin>
+           <groupId>org.apache.maven.plugins</groupId>
+           <artifactId>maven-antrun-plugin</artifactId>
+           <version>1.1</version>
+
+           <executions>
+
+            <!-- clean生命周期 -->
+            <!-- 每个插件可以有多个目标。 -->
+              <execution>
+                 <id>id.pre-clean</id>
+                 <phase>pre-clean</phase>
+                 
+                 <goals>
+                    <goal>run</goal>
+                 </goals>
+                  <!-- 绑定到插件的目标的方式来配置要执行的任务 -->
+                 <configuration>
+                    <tasks>
+                       <echo>pre-clean phase</echo>
+                    </tasks>
+                 </configuration>
+
+              </execution>
+           
+              <execution>
+                 <id>id.clean</id>
+                 <phase>clean</phase>
+                 <goals>
+                  <goal>run</goal>
+                 </goals>
+                 <configuration>
+                    <tasks>
+                       <echo>clean phase</echo>
+                    </tasks>
+                 </configuration>
+              </execution>
+              
+              <execution>
+                 <id>id.post-clean</id>
+                 <phase>post-clean</phase>
+                 <goals>
+                    <goal>run</goal>
+                 </goals>
+                 <configuration>
+                    <tasks>
+                       <echo>post-clean phase</echo>
+                    </tasks>
+                 </configuration>
+              </execution>
+
+              <!-- Default生命周期 -->
+              <execution>
+                <id>id.validate</id>
+                <phase>validate</phase>
+                <goals>
+                   <goal>run</goal>
+                </goals>
+                <configuration>
+                   <tasks>
+                      <echo>validate phase</echo>
+                   </tasks>
+                </configuration>
+             </execution>
+
+             <execution>
+                <id>id.compile</id>
+                <phase>compile</phase>
+                <goals>
+                   <goal>run</goal>
+                </goals>
+                <configuration>
+                   <tasks>
+                      <echo>compile phase</echo>
+                   </tasks>
+                </configuration>
+             </execution>
+
+             <execution>
+                <id>id.test</id>
+                <phase>test</phase>
+                <goals>
+                   <goal>run</goal>
+                </goals>
+                <configuration>
+                   <tasks>
+                      <echo>test phase</echo>
+                   </tasks>
+                </configuration>
+             </execution>
+
+             <execution>
+                   <id>id.package</id>
+                   <phase>package</phase>
+                   <goals>
+                      <goal>run</goal>
+                   </goals>
+                   <configuration>
+                   <tasks>
+                      <echo>package phase</echo>
+                   </tasks>
+                </configuration>
+             </execution>
+
+             <execution>
+                <id>id.deploy</id>
+                <phase>deploy</phase>
+                <goals>
+                   <goal>run</goal>
+                </goals>
+                <configuration>
+                <tasks>
+                   <echo>deploy phase</echo>
+                </tasks>
+                </configuration>
+             </execution>
+             
+             <!-- site生命周期 -->
+             <execution>
+                <id>id.pre-site</id>
+                <phase>pre-site</phase>
+                <goals>
+                   <goal>run</goal>
+                </goals>
+                <configuration>
+                   <tasks>
+                      <echo>pre-site phase</echo>
+                   </tasks>
+                </configuration>
+             </execution>
+
+             <execution>
+                <id>id.site</id>
+                <phase>site</phase>
+                <goals>
+                <goal>run</goal>
+                </goals>
+                <configuration>
+                   <tasks>
+                      <echo>site phase</echo>
+                   </tasks>
+                </configuration>
+             </execution>
+
+             <execution>
+                <id>id.post-site</id>
+                <phase>post-site</phase>
+                <goals>
+                   <goal>run</goal>
+                </goals>
+                <configuration>
+                   <tasks>
+                      <echo>post-site phase</echo>
+                   </tasks>
+                </configuration>
+             </execution>
+             
+             <execution>
+                <id>id.site-deploy</id>
+                <phase>site-deploy</phase>
+                <goals>
+                   <goal>run</goal>
+                </goals>
+                <configuration>
+                   <tasks>
+                      <echo>site-deploy phase</echo>
+                   </tasks>
+                </configuration>
+             </execution>
+             
+           </executions>
+           </plugin>
+        </plugins>
+        </build>
+
+</project>

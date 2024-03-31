@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+ <trees>
+     <tree path="/sky-common" title="公共类"/>
+     <tree path="/sky-pojo" title="实体类"/>
+     <tree path="/sky-server" title="配置文件"/>
+     <tree path="" title="父工程"/>
+     <tree path="/sky-common/src/main/java/com/sky/constant" title="相关常量类"/>
+     <tree path="/sky-common/src/main/java/com/sky/context" title="上下文类"/>
+     <tree path="/sky-common/src/main/java/com/sky/enumeration" title="枚举类"/>
+     <tree path="/sky-common/src/main/java/com/sky/exception" title="自定义异常类"/>
+     <tree path="/sky-common/src/main/java/com/sky/json" title="转换类"/>
+     <tree path="/sky-common/src/main/java/com/sky/properties" title="SpringBoot的配置属性类"/>
+     <tree path="/sky-common/src/main/java/com/sky/result" title="结果类的封装"/>
+    <tree path="/sky-common/src/main/java/com/sky/utils" title="工具类"/>
+    <tree path="/sky-pojo/src/main/java/com/sky/dto" title="数据传输对象"/>
+    <tree path="/sky-pojo/src/main/java/com/sky/entity" title="实体，与database的table相对应"/>
+    <tree path="/sky-pojo/src/main/java/com/sky/vo" title="视图，针对前端"/>
+    <tree path="/sky-server/src/main/java/com/sky" title="启动类"/>
+    <tree path="/sky-server/src/main/java/com/sky/config" title="配置类"/>
+    <tree path="/sky-server/src/main/java/com/sky/controller/admin" title="控制器"/>
+    <tree path="/sky-server/src/main/java/com/sky/interceptor" title="拦截器"/>
+    <tree path="/sky-server/src/main/java/com/sky/mapper" title="mapper接口"/>
+    <tree path="/sky-server/src/main/java/com/sky/service" title="服务类"/>
+    <tree path="/sky-server/src/main/java/com/sky/service/impl" title="实现服务"/>
+    <tree path="/sky-server/src/main/java/com/sky/annotation" title="注解类"/>
+    <tree path="/sky-server/src/main/java/com/sky/aspect" title="自定义切面"/>
+</trees>
