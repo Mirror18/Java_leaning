@@ -40,4 +40,6 @@ public interface DishService {
      * @param dishDTO
      */
     void updateWithFlavor(DishDTO dishDTO);
+
+    List<DishVO> listWithFlavor(Dish dish);
 }
