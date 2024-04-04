@@ -12,6 +12,9 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+/**
+ * 套餐业务实现
+ */
 @Service
 @Slf4j
 public class SetmealServiceImpl  implements SetmealService {
@@ -23,6 +26,11 @@ public class SetmealServiceImpl  implements SetmealService {
     @Autowired
     private DishMapper dishMapper;
 
+    /**
+     * 条件查询
+     * @param setmeal
+     * @return
+     */
     @Override
     public List<Setmeal> list(Setmeal setmeal) {
         List<Setmeal> list = setmealMapper.list(setmeal);
@@ -30,6 +38,11 @@ public class SetmealServiceImpl  implements SetmealService {
         return list;
     }
 
+    /**
+     * 根据ID查询菜品选项
+     * @param id
+     * @return
+     */
     @Override
     public List<DishItemVO> getDishItemById(Long id) {
         return setmealMapper.getDishItemBySetmealId(id);
