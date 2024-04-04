@@ -1,6 +1,5 @@
 package com.sky.context;
 
-//封装了ThreadLocal操作的工具类
 public class BaseContext {
 
     public static ThreadLocal<Long> threadLocal = new ThreadLocal<>();

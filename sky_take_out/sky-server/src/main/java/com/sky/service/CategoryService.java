@@ -1,13 +1,9 @@
 package com.sky.service;
 
-import com.sky.annotation.AutoFill;
 import com.sky.dto.CategoryDTO;
 import com.sky.dto.CategoryPageQueryDTO;
 import com.sky.entity.Category;
-import com.sky.enumeration.OperationType;
 import com.sky.result.PageResult;
-import org.apache.ibatis.annotations.Insert;
-
 import java.util.List;
 
 public interface CategoryService {
@@ -50,5 +46,4 @@ public interface CategoryService {
      * @return
      */
     List<Category> list(Integer type);
-
 }

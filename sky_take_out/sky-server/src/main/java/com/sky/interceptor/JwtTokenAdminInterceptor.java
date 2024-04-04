@@ -39,7 +39,7 @@ public class JwtTokenAdminInterceptor implements HandlerInterceptor {
             return true;
         }
 
-        //1、从请求头中获取令牌,jwtProperties.getAdminTokenName()获取为token
+        //1、从请求头中获取令牌
         String token = request.getHeader(jwtProperties.getAdminTokenName());
 
         //2、校验令牌
@@ -47,15 +47,19 @@ public class JwtTokenAdminInterceptor implements HandlerInterceptor {
             log.info("jwt校验:{}", token);
             Claims claims = JwtUtil.parseJWT(jwtProperties.getAdminSecretKey(), token);
             Long empId = Long.valueOf(claims.get(JwtClaimsConstant.EMP_ID).toString());
-            log.info("当前员工id：{}", empId);
-            //将用户id存储到ThreadLocal
+            log.info("当前员工id：", empId);
+
+//            将用户id存储到ThreadLocal
             BaseContext.setCurrentId(empId);
+
             //3、通过，放行
             return true;
         } catch (Exception ex) {
-            //4、不通过，响应401 状态码
+            //4、不通过，响应401状态码
             response.setStatus(401);
             return false;
         }
     }
+
+
 }
