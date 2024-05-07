@@ -17,6 +17,7 @@
         <module>sky-pojo</module>
         <module>sky-server</module>
     </modules>
+    
     <properties>
         <mybatis.spring>2.2.0</mybatis.spring>
         <lombok>1.18.30</lombok>
@@ -33,6 +34,13 @@
     </properties>
     <dependencyManagement>
         <dependencies>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-devtools</artifactId>
+                <version>3.2.4</version>
+            </dependency>
+
             <dependency>
                 <groupId>org.mybatis.spring.boot</groupId>
                 <artifactId>mybatis-spring-boot-starter</artifactId>

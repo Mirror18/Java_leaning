@@ -76,19 +76,21 @@ public class EmployeeController {
 
     /**
      * 新增员工
+     *
      * @param employeeDTO
      * @return
      */
     @PostMapping
     @ApiOperation("新增员工")
     public Result save(@RequestBody EmployeeDTO employeeDTO) {
-        log.info("新增员工：{}",employeeDTO);
+        log.info("新增员工：{}", employeeDTO);
         employeeService.save(employeeDTO);
         return Result.success();
     }
 
     /**
      * 员工分页查询
+     *
      * @param employeePageQueryDTO
      * @return
      */
@@ -102,6 +104,7 @@ public class EmployeeController {
 
     /**
      * 启用禁用员工账户
+     *
      * @param status
      * @param id
      * @return
@@ -116,6 +119,7 @@ public class EmployeeController {
 
     /**
      * 根据iD查询用户信息
+     *
      * @param id
      * @return
      */
@@ -129,6 +133,7 @@ public class EmployeeController {
 
     /**
      * 编辑员工信息
+     *
      * @param employeeDTO
      * @return
      */
@@ -140,4 +145,11 @@ public class EmployeeController {
         return Result.success();
     }
 
+//    @PutMapping("/editPassword")
+//    @ApiOperation("修改密码")
+//    public Result editPassword(@RequestBody EmployeeDTO employeeDTO){
+//        log.info("修改密码");
+//        employeeService.editPassword(employeeDTO);//todo:实现密码修改
+//        return Result.success();
+//    }
 }
